@@ -1,0 +1,117 @@
+{
+	"height": 16,
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"sway/workspaces",
+		"sway/mode",
+		"sway/window"	
+	],
+
+	"modules-right": [
+		"tray",
+
+		"custom/separator4",
+		"network",
+		"custom/separator3",
+		"battery",
+		"custom/separator2",
+		"sway/language",
+		"custom/separator1",
+		"clock"
+		//"custom/separator0",
+		//"custom/power"
+	],
+
+	// Modules
+	"sway/window": {
+		"tooltip": false,
+	},
+	"tray": {
+		"icon-size": 20,
+    "spacing": 4
+	},
+
+	"network": {
+		"interface": "wlp61s0",
+		
+		"format": "{ifname}",
+		"format-wifi": "{icon}{essid}",
+		"format-ethernet": "{essid}",
+		"format-disconnected": "Disconnected",
+		"format-icons": ["","",""],
+		
+		"tooltip-format": "Not doing anything",
+		"tooltip-format-disconnected": "Not connected to anything",
+		"tooltip-format-wifi": "Connected to {essid} ({signalStrength}%)",
+		"tooltip-format-ethernet": "Connected to {essid}",
+	},
+
+	"battery": {
+		"interval": 30,
+		"format-time": "{H}h:{M}m",
+		"format": "{icon}{capacity}%({time})",
+		"states": {
+			"low": 20,
+			"medium": 75,
+			"high": 100,
+		},
+		"format-icons": {
+			"low": "",
+			"medium": "",
+			"high": "",
+			"charging": ""
+		},
+		"tooltip": false
+	},
+
+	"sway/language": {
+		"format": "{short}",
+		"tooltip": false
+	},
+
+	"clock": {
+		"interval": 10,
+		"format": "{:%H:%M:%S %p}",
+		"format-alt": "{:%F}",
+		"max-length": 25,
+		"tooltip": false
+        },
+
+	//"custom/power": {
+	//	"format": "",
+	//	"tooltip": false,
+	//	"menu": "on-click",
+	//	"menu-file": "$HOME/.config/waybar/scripts/power_menu.xml",
+	//	"menu-actions": {
+	//		"poweroff": "$HOME/.config/waybar/scripts/yad.sh --poweroff",
+	//		"reboot": "$HOME/.config/waybar/scripts/yad.sh --reboot",
+	//		"suspend": "$HOME/.config/waybar/scripts/yad.sh --suspend",
+	//	}
+	//},
+	
+	// Separators
+	"custom/separator4": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/separator3": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/separator2": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/separator1": {
+		"format": "",
+		"tooltip": false
+	}
+	//"custom/separator0": {
+	//	"format": " ",
+	//	"tooltip": false
+	//}
+}
+
+// vi:ft=jsonc
