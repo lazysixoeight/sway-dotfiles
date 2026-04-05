@@ -8,7 +8,7 @@
     background-color:      #161613;
     border-color:          White;
     text-color:           #fdfff1;
-    font:            "DejaVu Sans Mono 13";
+    font:            "Iosevka Extended 12";
 }
 window {
     anchor:     north;
